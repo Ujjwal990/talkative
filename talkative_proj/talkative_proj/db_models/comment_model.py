@@ -5,9 +5,9 @@ from talkative_proj.utils.sql_alchemy_engine import SqlAlchemyEngine
 
 logger = logging.getLogger("apps")
 
-class TKTgenericModel:
+class TKTcommentModel:
     def __init__(self):
-        self.database = list(settings.VENDOR_CONF.get("DATABASE", []))[0]
+        self.database = list(settings.VENDOR_CONF.get("ParmarSsc").get("DATABASE", []))[0]
         self.table_name = "comment"
         self.table_columns = ["comment_id", "stream_id", "account_id", "comment_text", "comment_time", "parent_comment_id"]
         self.curr = SqlAlchemyEngine().get_connection(self.database)

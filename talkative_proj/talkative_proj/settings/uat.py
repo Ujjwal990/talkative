@@ -1,7 +1,10 @@
-print("inside dev file")
-localhost = '127.0.0.1'
-DEBUG = True
+import os
+
+localhost='127.0.0.1'
+
+DEBUG = False
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+VENDOR_NAME = os.environ.get("VENDOR_NAME", "ParmarSsc")
 
 VENDOR_CONF = {
     "ParmarSsc": {
@@ -10,9 +13,8 @@ VENDOR_CONF = {
                 "ENGINE": "django.db.backends.mysql",
                 "NAME": "parmarssc",
                 "USER": "root",
-                "PASSWORD": "root",
-                # "HOST": "isme aws ka link aana chahiye where db is hosted",
-                "HOST": "localhost",
+                "PASSWORD": "12345678",
+                "HOST": "localhost",  # "isme aws ka link aana chahiye where db is hosted",
                 "PORT": "3306"
             }
         },
@@ -40,3 +42,5 @@ VENDOR_CONF = {
         "BUCKET": "parmar_ssc_1"
     }
 }
+VENDOR_CONFIG = VENDOR_CONF.get(VENDOR_NAME)
+ROOT_URLCONF = 'talkative_proj.urls'

@@ -38,3 +38,5 @@ VENDOR_CONF = {
         "BUCKET": "parmar_ssc_1"
     }
 }
+
+ROOT_URLCONF = 'talkative_proj.urls'

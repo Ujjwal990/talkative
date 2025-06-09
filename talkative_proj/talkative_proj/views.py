@@ -3,6 +3,7 @@ import json
 from django.shortcuts import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from talkative_proj.db_models.generic_model import TKTgenericModel
+from talkative_proj.db_models.comment_model import TKTcommentModel
 logger = logging.getLogger("apps")
 
 
@@ -16,7 +17,7 @@ def ping(request):
 @csrf_exempt
 def db_ping(request):
     try:
-        table_obj = TKTgenericModel()
+        table_obj = TKTcommentModel()
         resp = table_obj.get_complete_table()
         print(resp)
         logger.info(resp)
