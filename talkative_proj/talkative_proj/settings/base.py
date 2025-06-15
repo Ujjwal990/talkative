@@ -122,4 +122,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CELERY_APP_NAME = "talkative_proj"
+CELERY_APP_NAME = "talkative-proj"

@@ -29,4 +29,5 @@ def db_ping(request):
 def celery_ping(request):
     from talkative_proj.celery_app.tasks import add
     add.apply_async(kwargs={'y':5, 'x':4}, queue="celery_talkative_processor")
+    # add.apply_async(kwargs={'y':5, 'x':4})
     return HttpResponse("Pinging")

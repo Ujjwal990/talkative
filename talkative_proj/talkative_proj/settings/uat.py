@@ -44,3 +44,4 @@ VENDOR_CONF = {
 }
 VENDOR_CONFIG = VENDOR_CONF.get(VENDOR_NAME)
 ROOT_URLCONF = 'talkative_proj.urls'
+CELERY_APP_NAME = "talkative-proj"
